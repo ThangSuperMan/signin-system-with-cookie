@@ -1,0 +1,69 @@
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border  ;
+}
+
+header {
+  background-color: #eee;
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.title {
+  text-align: center;
+  margin-top: 32px;
+  padding-block: 8px;
+}
+
+.menu-logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-list-username {
+  margin-right: 8px;
+}
+
+.menu-list ul {
+  display: flex;
+}
+
+.menu-list ul li {
+  list-style: none;
+}
+
+.menu-list ul li a { 
+  text-decoration: none;
+}
+
+.menu-list ul li:hover a {
+  text-decoration: underline;
+}
+
+.menu-list ul li a:first-child {
+  margin-right: 8px;
+}  
+
+.form-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
+form > div {
+   text-align: center;  
+}
+
+form button {
+  padding: 4px 8px;
+}

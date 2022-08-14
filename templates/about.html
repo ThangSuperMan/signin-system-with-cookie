@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Homepage</title>
+  <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <main>
+    <!-- User signed in -->
+    {{ if .IsSignedIn }}
+    <header>
+      <div class="menu-logo">
+        <a href="/">
+          Logo
+        </a>
+      </div>
+      <div class="menu-list">
+        <ul>
+          <li class="menu-list-username">{{ .Username }}</li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <!-- <li> -->
+          <!--   <a href="/signin">Signin</a> -->
+          <!-- </li> -->
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    {{ else }}
+    <header>
+      <div class="menu-logo">
+        <a href="/">
+          Logo
+        </a>
+      </div>
+      <div class="menu-list">
+        <ul>
+          <li>{{ .Username }}</li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/signin">Signin</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    {{ end }}
+    <h1 class="title">About page</h1>
+  </main>
+</body>
+
+</html>
